@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.devhas</groupId>
     <artifactId>devhas-spring-pet-clinic</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>devhas-spring-pet-clinic</name>
     <description>Demo project for Spring Boot</description>
 
@@ -40,6 +40,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:hassancoul/devhas-spring-pet-clinic.git</developerConnection>
+    <tag>devhas-spring-pet-clinic-0.0.1</tag>
   </scm>
 
 </project>
