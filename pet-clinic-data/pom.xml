@@ -11,6 +11,10 @@
 
     <artifactId>pet-clinic-data</artifactId>
 
+    <properties>
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -49,7 +53,6 @@
                             <goal>repackage</goal>
                         </goals>
                         <configuration>
-                            <skip>true</skip>
                             <excludes>
                                 <exclude>
                                     <groupId>org.projectlombok</groupId>
