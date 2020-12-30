@@ -1,6 +1,6 @@
 package com.devhas.devhasspringpetclinic.models;
 
-public class PetType {
+public class PetType extends BaseEntity {
 
     private String name;
 
