@@ -1,4 +1,4 @@
-package com.devhas.devhasspringpetclinic;
+package devhasspringpetclinic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
