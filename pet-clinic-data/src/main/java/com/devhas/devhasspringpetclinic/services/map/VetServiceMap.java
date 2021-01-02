@@ -1,11 +1,11 @@
 package com.devhas.devhasspringpetclinic.services.map;
 
 import com.devhas.devhasspringpetclinic.models.Vet;
-import com.devhas.devhasspringpetclinic.services.CrudService;
+import com.devhas.devhasspringpetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
