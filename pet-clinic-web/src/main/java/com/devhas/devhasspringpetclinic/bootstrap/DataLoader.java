@@ -1,10 +1,7 @@
 package com.devhas.devhasspringpetclinic.bootstrap;
 
 import com.devhas.devhasspringpetclinic.models.*;
-import com.devhas.devhasspringpetclinic.services.OwnerService;
-import com.devhas.devhasspringpetclinic.services.PetTypeService;
-import com.devhas.devhasspringpetclinic.services.SpecialityService;
-import com.devhas.devhasspringpetclinic.services.VetService;
+import com.devhas.devhasspringpetclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,12 +14,15 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
+                      SpecialityService specialityService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialityService = specialityService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -74,6 +74,12 @@ public class DataLoader implements CommandLineRunner {
         owner1.getPets().add(ericsPet);
         ownerService.save(owner1);
 
+        Visit visitEricPet = new Visit();
+        visitEricPet.setDate(LocalDate.now());
+        visitEricPet.setDescription("Mal a la tête");
+        visitEricPet.setPet(ericsPet);
+        visitService.save(visitEricPet);
+
         Owner owner2 = new Owner();
         owner2.setFirstName("Aziz");
         owner2.setLastName("Koné");
@@ -97,7 +103,14 @@ public class DataLoader implements CommandLineRunner {
         owner2.getPets().add(nadiyasPet);
         ownerService.save(owner2);
 
+        Visit visitNadiyaPet = new Visit();
+        visitNadiyaPet.setDate(LocalDate.now());
+        visitNadiyaPet.setDescription("Sneezy kitty");
+        visitNadiyaPet.setPet(nadiyasPet);
+        visitService.save(visitNadiyaPet);
+
         System.out.println("Loaded Owners...");
+        System.out.println("Loaded Visit...");
 
         Vet vet1 = new Vet();
         vet1.setFirstName("Firmin");
