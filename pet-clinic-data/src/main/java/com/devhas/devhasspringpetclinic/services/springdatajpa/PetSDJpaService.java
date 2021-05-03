@@ -11,7 +11,7 @@ import java.util.Set;
 @Service
 public class PetSDJpaService implements PetService {
 
-    PetRepository petRepository;
+    private final PetRepository petRepository;
 
     public PetSDJpaService(PetRepository petRepository) {
         this.petRepository = petRepository;
