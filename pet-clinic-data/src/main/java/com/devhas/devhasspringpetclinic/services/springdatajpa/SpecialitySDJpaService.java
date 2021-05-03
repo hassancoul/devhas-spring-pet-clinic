@@ -3,10 +3,12 @@ package com.devhas.devhasspringpetclinic.services.springdatajpa;
 import com.devhas.devhasspringpetclinic.models.Speciality;
 import com.devhas.devhasspringpetclinic.repositories.SpecialityRepository;
 import com.devhas.devhasspringpetclinic.services.SpecialityService;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
 public class SpecialitySDJpaService implements SpecialityService {
 
     private final SpecialityRepository specialityRepository;
