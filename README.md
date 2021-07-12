@@ -1,4 +1,7 @@
 # devhas-spring-pet-clinic
+
+[![CircleCI](https://circleci.com/gh/hassancoul/devhas-spring-pet-clinic/tree/main.svg?style=svg)](https://circleci.com/gh/hassancoul/devhas-spring-pet-clinic/tree/main)
+
 Spring Pet Clinic Web Application for Spring Framework Guru tutorial
 
 ## Prepare a release with
